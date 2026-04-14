@@ -28,7 +28,12 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["blog-api-production-00ec.up.railway.app",
+    "localhost",
+    "127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://blog-api-production-00ec.up.railway.app"
+]
 
 
 # Application definition
