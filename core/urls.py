@@ -19,11 +19,14 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework.permissions import AllowAny
 from .views import CustomTokenObtainPairView
+from .views import home
+from . import views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home),
     path('api/users/',include('users.urls')),
     path('api/',include('posts.urls')),
     path('api/token/', CustomTokenObtainPairView.as_view(),name='token_obtain_pair'),
