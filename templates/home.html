@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< feature-ui-update
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog API Docs</title>
 
+<link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -283,143 +284,6 @@ footer {
 <!-- ================= FOOTER ================= -->
 <footer>
     © 2026 Blog API • Developed by Priyanshu Songara
-=======
-    <meta charset="UTF-8">
-    <title>Blog API - Priyanshu Songara</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            animation: fadeIn 2s ease;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            color: #38bdf8;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #cbd5f5;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        h2 {
-            color: #38bdf8;
-        }
-
-        .endpoint {
-            color: #22c55e;
-            font-family: monospace;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #020617;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-
-        .fade {
-            animation: fadeIn 1.5s ease;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>🚀 Blog API</h1>
-    <p>A RESTful API built using Django REST Framework</p>
-</header>
-
-<section class="fade">
-    <h2>📌 About This API</h2>
-    <div class="card">
-        <p>
-            This is a production-ready Blog API that allows users to register,
-            authenticate using JWT, create posts, and add comments.
-        </p>
-    </div>
-</section>
-
-<section class="fade">
-    <h2>⚡ API Endpoints</h2>
-
-    <div class="card">
-        <p><strong>Register:</strong></p>
-        <p class="endpoint">POST /api/users/register/</p>
-    </div>
-
-    <div class="card">
-        <p><strong>Login:</strong></p>
-        <p class="endpoint">POST /api/token/</p>
-    </div>
-
-    <div class="card">
-        <p><strong>Posts:</strong></p>
-        <p class="endpoint">GET /api/posts/</p>
-        <p class="endpoint">POST /api/posts/</p>
-    </div>
-
-    <div class="card">
-        <p><strong>Comments:</strong></p>
-        <p class="endpoint">GET /api/comments/</p>
-        <p class="endpoint">POST /api/comments/</p>
-    </div>
-</section>
-
-<section class="fade">
-    <h2>🛠 How to Use</h2>
-    <div class="card">
-        <p>1. Register a user</p>
-        <p>2. Login to get JWT token</p>
-        <p>3. Use token in Authorization header</p>
-        <p>4. Create posts & comments</p>
-    </div>
-</section>
-
-<section class="fade">
-    <h2>👨‍💻 Developer</h2>
-    <div class="card">
-        <p><strong>Priyanshu Songara</strong></p>
-        <p>Backend Developer | Django | REST APIs</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Priyanshu Songara | Blog API</p>
->>>>>>> main
 </footer>
 
 </body>
