@@ -1,141 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog API - Priyanshu Songara</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            overflow-x: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog API Docs</title>
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            animation: fadeIn 2s ease;
-        }
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header h1 {
-            font-size: 3rem;
-            color: #38bdf8;
-        }
+<style>
+:root {
+    --bg: #0B0B0F;
+    --card: #15151C;
+    --text: #FFFFFF;
+    --muted: #A1A1AA;
+    --accent: #FF6A00;
+    --border: rgba(255,255,255,0.08);
+}
 
-        header p {
-            font-size: 1.2rem;
-            color: #cbd5f5;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+body {
+    background: var(--bg);
+    color: var(--text);
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+/* =========================
+   TOP LOGO SECTION
+========================= */
+.top {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+/* Animated Logo */
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out, float 3s ease-in-out infinite;
+}
 
-        h2 {
-            color: #38bdf8;
-        }
+/* Orange API highlight */
+.logo span {
+    color: var(--accent);
+}
 
-        .endpoint {
-            color: #22c55e;
-            font-family: monospace;
-        }
+/* Name */
+.name {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 1rem;
+}
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #020617;
-        }
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-        .fade {
-            animation: fadeIn 1.5s ease;
-        }
-    </style>
+/* =========================
+   DESCRIPTION SECTION
+========================= */
+.description {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+}
+
+.description h2 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.description p {
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   API FLOW DIAGRAM
+========================= */
+.flow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+.node {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    border-radius: 10px;
+    min-width: 160px;
+    text-align: center;
+    position: relative;
+    transition: 0.2s;
+}
+
+.node:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* arrows */
+.node:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -18px;
+    top: 35%;
+    color: var(--accent);
+    font-size: 18px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title {
+    text-align: center;
+    margin: 20px 0 10px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* =========================
+   ENDPOINT CARDS
+========================= */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 20px 8%;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.small {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.endpoint {
+    margin-top: 6px;
+    font-family: monospace;
+    color: #fff;
+    background: rgba(255,106,0,0.08);
+    padding: 6px;
+    border-radius: 6px;
+    border-left: 2px solid var(--accent);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .node:not(:last-child)::after {
+        display: none;
+    }
+
+    .flow {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>🚀 Blog API</h1>
-    <p>A RESTful API built using Django REST Framework</p>
-</header>
+<!-- ================= LOGO ================= -->
+<div class="top">
+    <div class="logo">Blog<span>API</span></div>
+    <div class="name">by Priyanshu Songara</div>
+</div>
 
-<section class="fade">
-    <h2>📌 About This API</h2>
+<!-- ================= DESCRIPTION ================= -->
+<div class="description">
+    <h2>API Documentation</h2>
+    <p>
+        This Blog API is built using Django REST Framework with JWT authentication.
+        It supports user registration, secure login, blog post creation with permissions, commenting system,
+        pagination for performance, and filtering/search functionality.
+        The system follows REST architecture with modular design and scalable backend structure.
+    </p>
+</div>
+
+<!-- ================= FLOW DIAGRAM ================= -->
+<div class="section-title">CORE WORKFLOW</div>
+
+<div class="flow">
+    <div class="node">User Register</div>
+    <div class="node">JWT Login</div>
+    <div class="node">Token Auth</div>
+    <div class="node">Access API</div>
+    <div class="node">Posts / Comments</div>
+</div>
+
+<!-- ================= ENDPOINTS ================= -->
+<div class="section-title">API ENDPOINTS</div>
+
+<div class="container">
+
     <div class="card">
-        <p>
-            This is a production-ready Blog API that allows users to register,
-            authenticate using JWT, create posts, and add comments.
-        </p>
-    </div>
-</section>
+        <h3>Authentication</h3>
+        <div class="small">Register new user</div>
+        <div class="endpoint">POST /api/users/register/</div>
 
-<section class="fade">
-    <h2>⚡ API Endpoints</h2>
-
-    <div class="card">
-        <p><strong>Register:</strong></p>
-        <p class="endpoint">POST /api/users/register/</p>
+        <div class="small">Login (JWT token)</div>
+        <div class="endpoint">POST /api/token/</div>
     </div>
 
     <div class="card">
-        <p><strong>Login:</strong></p>
-        <p class="endpoint">POST /api/token/</p>
+        <h3>Posts</h3>
+        <div class="small">Get all posts (paginated)</div>
+        <div class="endpoint">GET /api/posts/?page=1</div>
+
+        <div class="small">Create post</div>
+        <div class="endpoint">POST /api/posts/</div>
+
+        <div class="small">Search posts</div>
+        <div class="endpoint">GET /api/posts/?search=django</div>
     </div>
 
     <div class="card">
-        <p><strong>Posts:</strong></p>
-        <p class="endpoint">GET /api/posts/</p>
-        <p class="endpoint">POST /api/posts/</p>
+        <h3>Comments</h3>
+        <div class="small">View comments</div>
+        <div class="endpoint">GET /api/comments/</div>
+
+        <div class="small">Add comment</div>
+        <div class="endpoint">POST /api/comments/</div>
     </div>
 
-    <div class="card">
-        <p><strong>Comments:</strong></p>
-        <p class="endpoint">GET /api/comments/</p>
-        <p class="endpoint">POST /api/comments/</p>
-    </div>
-</section>
+</div>
 
-<section class="fade">
-    <h2>🛠 How to Use</h2>
-    <div class="card">
-        <p>1. Register a user</p>
-        <p>2. Login to get JWT token</p>
-        <p>3. Use token in Authorization header</p>
-        <p>4. Create posts & comments</p>
-    </div>
-</section>
-
-<section class="fade">
-    <h2>👨‍💻 Developer</h2>
-    <div class="card">
-        <p><strong>Priyanshu Songara</strong></p>
-        <p>Backend Developer | Django | REST APIs</p>
-    </div>
-</section>
-
+<!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 Priyanshu Songara | Blog API</p>
+    © 2026 Blog API • Developed by Priyanshu Songara
 </footer>
 
 </body>
