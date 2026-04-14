@@ -39,8 +39,10 @@ This project demonstrates real-world backend concepts such as authentication, pe
 * Search functionality
 * Pagination for large datasets
 * Permission-based access control
-* (Note: Here are the screenshots)
+  (Note: Here are the screenshots)
+  
   <img width="1920" height="1080" alt="Screenshot (3591)" src="https://github.com/user-attachments/assets/aff14491-4811-413f-8992-2a9e4ca67f81" />
+  
   <img width="1920" height="1080" alt="Screenshot (3592)" src="https://github.com/user-attachments/assets/d341efae-83fa-4899-92b0-1bba50bd36e3" />
 
 ---
