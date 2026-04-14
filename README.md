@@ -1,5 +1,6 @@
 <img width="100" height="100" alt="favicon" src="https://github.com/user-attachments/assets/e7252b88-137f-47be-85ee-fbb37ab36b23" /> 
-## Live API# Blog API (Django REST Framework)  
+# Blog API (Django REST Framework)  
+## Live API
 
 🔗 https://blog-api-production-00ec.up.railway.app/
 
