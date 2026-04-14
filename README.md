@@ -1,6 +1,6 @@
 # Blog API (Django REST Framework)  <img width="100" height="100" alt="favicon" src="https://github.com/user-attachments/assets/e7252b88-137f-47be-85ee-fbb37ab36b23" /> 
  
-## Live API
+## Live API (Production)
 
 🔗 https://blog-api-production-00ec.up.railway.app/
 
@@ -8,9 +8,9 @@
 
 ## Overview
 
-A production-ready Blog API built using Django REST Framework with JWT authentication, allowing users to create, manage, and interact with blog posts securely.
+A production-ready and fully deployed Blog API built using Django REST Framework with JWT authentication. This API allows users to securely create, manage, and interact with blog posts.
 
-This project demonstrates real-world backend concepts such as authentication, permissions, and scalable API design.
+The project is live and hosted, showcasing real-world backend concepts such as authentication, permission handling, and scalable API design in a production environment.
 
 ---
 
