@@ -1,12 +1,12 @@
-# 📝 Blog API (Django REST Framework)
+# Blog API (Django REST Framework)
 
-## 🌐 Live API
+## Live API
 
 🔗 https://blog-api-production-00ec.up.railway.app/
 
 ---
 
-## 📌 Overview
+## Overview
 
 A production-ready Blog API built using Django REST Framework with JWT authentication, allowing users to create, manage, and interact with blog posts securely.
 
@@ -14,27 +14,27 @@ This project demonstrates real-world backend concepts such as authentication, pe
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication
+### Authentication
 
 * User Registration
 * Login with JWT Authentication
 * Token-based secure access
 
-### 📝 Blog Functionality
+### Blog Functionality
 
 * Create posts
 * View all posts
 * Update & delete own posts only
 * View other users' posts (read-only)
 
-### 💬 Comments System
+### Comments System
 
 * Add comments to posts
 * View comments on posts
 
-### ⚙️ Advanced Features
+### Advanced Features
 
 * 🔎 Search functionality
 * 📄 Pagination for large datasets
@@ -42,7 +42,7 @@ This project demonstrates real-world backend concepts such as authentication, pe
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Backend:** Django, Django REST Framework
 * **Authentication:** JWT (JSON Web Tokens)
@@ -67,7 +67,7 @@ This project demonstrates real-world backend concepts such as authentication, pe
 
 ---
 
-## 🔐 Authentication Usage
+## Authentication Usage
 
 Add token in headers:
 
@@ -77,7 +77,7 @@ Authorization: Bearer <your_token>
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash id="install2"
 git clone https://github.com/priyanshusongara/Blog-API.git
@@ -88,7 +88,7 @@ python manage.py runserver
 
 ---
 
-## 🧠 Concepts Used
+## Concepts Used
 
 * Django REST Framework (APIView / ViewSets)
 * JWT Authentication
@@ -100,7 +100,7 @@ python manage.py runserver
 
 ---
 
-## 🚀 What I Learned
+## What I Learned
 
 * Built a secure API with JWT authentication
 * Implemented user-based permissions (ownership logic)
@@ -109,6 +109,10 @@ python manage.py runserver
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author : **Priyanshu Songara**
 
-**Priyanshu Songara**
+
+<img width="1920" height="1080" alt="Screenshot (3591)" src="https://github.com/user-attachments/assets/aff14491-4811-413f-8992-2a9e4ca67f81" />
+
+<img width="1920" height="1080" alt="Screenshot (3592)" src="https://github.com/user-attachments/assets/d341efae-83fa-4899-92b0-1bba50bd36e3" />
+
