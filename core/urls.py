@@ -25,7 +25,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='home'),
     path('api/users/',include('users.urls')),
     path('api/',include('posts.urls')),
     path('api/token/', CustomTokenObtainPairView.as_view(),name='token_obtain_pair'),
