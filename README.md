@@ -1,4 +1,4 @@
-# Blog API (Django REST Framework) - <img width="100" height="100" alt="favicon" src="https://github.com/user-attachments/assets/e7252b88-137f-47be-85ee-fbb37ab36b23" /> 
+# Blog API (Django REST Framework)  <img width="100" height="100" alt="favicon" src="https://github.com/user-attachments/assets/e7252b88-137f-47be-85ee-fbb37ab36b23" /> 
  
 ## Live API
 
