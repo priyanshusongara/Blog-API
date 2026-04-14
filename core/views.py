@@ -5,7 +5,5 @@ from django.shortcuts import render
 class CustomTokenObtainPairView(TokenObtainPairView):
     permission_classes=[AllowAny]
 
-
-
 def home(request):
     return render(request,'home.html')
