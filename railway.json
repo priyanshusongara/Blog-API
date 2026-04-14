@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn core.wsgi"
+    "startCommand": "python manage.py migrate && gunicorn core.wsgi"
   }
 }
